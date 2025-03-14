@@ -1,6 +1,5 @@
-{{ 
-    config(materialized="table")
-}}
+
+{{ config(materialized="table", tags=["marketing"], meta={"data_quality":"gold"}) }}
 
 select
     c.c_customer_sk,
