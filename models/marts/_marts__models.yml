@@ -183,3 +183,279 @@ models:
       - name: c_first_sales_date
         data_type: string
         description: ""
+
+  - name: sales
+    description: "contains all sales that happens through the channels: web, store and catalog."
+    config:
+      materialized: table 
+    columns:
+    - name: sale_channel
+      data_type: string
+      description: ""
+
+    - name: sold_date_sk
+      data_type: int64
+      description: ""
+
+    - name: sold_time_sk
+      data_type: int64
+      description: ""
+
+    - name: ship_date_sk
+      data_type: int64
+      description: ""
+
+    - name: customer_sk
+      data_type: int64
+      description: ""
+
+    - name: bill_cdemo_sk
+      data_type: int64
+      description: ""
+
+    - name: bill_hdemo_sk
+      data_type: int64
+      description: ""
+
+    - name: bill_addr_sk
+      data_type: int64
+      description: ""
+
+    - name: ship_customer_sk
+      data_type: int64
+      description: ""
+
+    - name: ship_cdemo_sk
+      data_type: int64
+      description: ""
+
+    - name: ship_hdemo_sk
+      data_type: int64
+      description: ""
+
+    - name: ship_addr_sk
+      data_type: int64
+      description: ""
+
+    - name: call_center_sk
+      data_type: int64
+      description: ""
+
+    - name: catalog_page_sk
+      data_type: int64
+      description: ""
+
+    - name: ship_mode_sk
+      data_type: int64
+      description: ""
+
+    - name: warehouse_sk
+      data_type: int64
+      description: ""
+
+    - name: item_sk
+      data_type: int64
+      description: ""
+
+    - name: promo_sk
+      data_type: int64
+      description: ""
+
+    - name: order_number
+      data_type: int64
+      description: ""
+
+    - name: quantity
+      data_type: int64
+      description: ""
+
+    - name: wholesale_cost
+      data_type: float64
+      description: ""
+
+    - name: list_price
+      data_type: float64
+      description: ""
+
+    - name: sales_price
+      data_type: float64
+      description: ""
+
+    - name: ext_discount_amt
+      data_type: float64
+      description: ""
+
+    - name: ext_sales_price
+      data_type: float64
+      description: ""
+
+    - name: ext_wholesale_cost
+      data_type: float64
+      description: ""
+
+    - name: ext_list_price
+      data_type: float64
+      description: ""
+
+    - name: ext_tax
+      data_type: float64
+      description: ""
+
+    - name: coupon_amt
+      data_type: float64
+      description: ""
+
+    - name: ext_ship_cost
+      data_type: float64
+      description: ""
+
+    - name: net_paid
+      data_type: float64
+      description: ""
+
+    - name: net_paid_inc_tax
+      data_type: float64
+      description: ""
+
+    - name: net_paid_inc_ship
+      data_type: float64
+      description: ""
+
+    - name: net_paid_inc_ship_tax
+      data_type: float64
+      description: ""
+
+    - name: net_profit
+      data_type: float64
+      description: ""
+
+    - name: web_page_sk
+      data_type: int64
+      description: ""
+
+    - name: web_site_sk
+      data_type: int64
+      description: ""
+
+    - name: cdemo_sk
+      data_type: int64
+      description: ""
+
+    - name: hdemo_sk
+      data_type: int64
+      description: ""
+
+    - name: addr_sk
+      data_type: int64
+      description: ""
+
+    - name: store_sk
+      data_type: int64
+      description: ""
+
+    - name: ticket_number
+      data_type: int64
+      description: ""
+
+  - name: store_sales
+    description: ""
+    columns:
+      - name: ss_sold_date_sk
+        data_type: int64
+        description: ""
+
+      - name: ss_sold_time_sk
+        data_type: int64
+        description: ""
+
+      - name: ss_item_sk
+        data_type: int64
+        description: ""
+
+      - name: ss_customer_sk
+        data_type: int64
+        description: ""
+
+      - name: ss_cdemo_sk
+        data_type: int64
+        description: ""
+
+      - name: ss_hdemo_sk
+        data_type: int64
+        description: ""
+
+      - name: ss_addr_sk
+        data_type: int64
+        description: ""
+
+      - name: ss_store_sk
+        data_type: int64
+        description: ""
+
+      - name: ss_promo_sk
+        data_type: int64
+        description: ""
+
+      - name: ss_ticket_number
+        data_type: int64
+        description: ""
+
+      - name: ss_quantity
+        data_type: int64
+        description: ""
+
+      - name: ss_wholesale_cost
+        data_type: float64
+        description: ""
+
+      - name: ss_list_price
+        data_type: float64
+        description: ""
+
+      - name: ss_sales_price
+        data_type: float64
+        description: ""
+
+      - name: ss_ext_discount_amt
+        data_type: float64
+        description: ""
+
+      - name: ss_ext_sales_price
+        data_type: float64
+        description: ""
+
+      - name: ss_ext_wholesale_cost
+        data_type: float64
+        description: ""
+
+      - name: ss_ext_list_price
+        data_type: float64
+        description: ""
+
+      - name: ss_ext_tax
+        data_type: float64
+        description: ""
+
+      - name: ss_coupon_amt
+        data_type: float64
+        description: ""
+
+      - name: ss_net_paid
+        data_type: float64
+        description: ""
+
+      - name: ss_net_paid_inc_tax
+        data_type: float64
+        description: ""
+
+      - name: ss_net_profit
+        data_type: float64
+        description: ""
+
+      - name: sale_date
+        data_type: string
+        description: ""
+
+      - name: sale_timestamp
+        data_type: timestamp
+        description: ""

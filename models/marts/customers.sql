@@ -1,3 +1,7 @@
+{{ 
+    config(materialized="table")
+}}
+
 select
     c.c_customer_sk,
     c.c_customer_id,
