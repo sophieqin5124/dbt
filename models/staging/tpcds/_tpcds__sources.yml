@@ -3,7 +3,7 @@ version: 2
 sources:
   - name: tpcds
     description: TPC-DS models any industry that must manage, sell and distribute products.
-    database: dbt-learning-project-374406
+    database: dbt-project-453423
     schema: raw_tpcds_data
     meta:
       data_source: "TPC-DS Benchmark"
