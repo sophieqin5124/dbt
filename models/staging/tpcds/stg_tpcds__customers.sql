@@ -1,3 +1,5 @@
+{{ config(meta={'data_quality':'silver'}) }}
+
 with source_data as (
 
     select * from {{ source('tpcds', 'customer') }}
