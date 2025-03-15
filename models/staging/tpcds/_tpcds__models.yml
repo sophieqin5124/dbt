@@ -8,10 +8,10 @@ models:
             description: "The primary key for this table"
           - name: c_current_addr_sk
             description: "The current address of the customer"
-            # tests:
-            #   - relationships:
-            #       field: ca_address_sk
-            #       to: ref('stg_tpcds__customer_address')                           
+            tests:
+              - relationships:
+                  field: ca_address_sk
+                  to: ref('stg_tpcds__customer_address')  # every address in c_current_addr_sk colmn should match the address in ca_address_sk                    
 
 
     - name: stg_tpcds__customer_demographics
@@ -26,12 +26,12 @@ models:
            * F for Female
         - name: cd_marital_status
           description: "{{doc('cd_marital_status')}}"
-          # tests:
-          #    - dbt_expectations.expect_column_values_to_not_be_in_set: 
-          #        value_set: ['S'] 
-          #        row_condition: "cd_credit_rating = 'High Risk' and cd_dep_count > 0" 
-          #        config:
-          #          store_failures: true
+          tests:
+              - dbt_expectations.expect_column_values_to_not_be_in_set: 
+                 value_set: ['S'] 
+                 row_condition: "cd_credit_rating = 'High Risk' and cd_dep_count > 0" 
+                 config:
+                   store_failures: true
             # - accepted_values:
             #     values: ['S','M','D','W','U']
 
@@ -49,12 +49,12 @@ models:
       columns:
         - name: ca_address_sk
           description: "Primary Key"
-          # tests:
-          #   - not_null
-          #   - unique
-          #   - relationships:
-          #       to: ref('stg_tpcds__customers')
-          #       field: c_current_addr_sk
+          tests:
+            - not_null
+            - unique
+            - relationships:
+                to: ref('stg_tpcds__customers')
+                field: c_current_addr_sk
             
         - name: ca_address_id
           description: ""

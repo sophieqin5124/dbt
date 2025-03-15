@@ -2,12 +2,16 @@ version: 2
 
 models:
   - name: customers
-    description: ""
+    description: "" 
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "DATE_DIFF(current_date(), c_birthdate, year) >=18"
+
     columns:
       - name: c_customer_sk
         data_type: int64
         description: ""
-
+        
       - name: c_customer_id
         data_type: string
         description: ""
@@ -458,4 +462,6 @@ models:
 
       - name: sale_timestamp
         data_type: timestamp
-        description: ""
+        description: "" 
+        tests:
+          - timestamp_is_past
